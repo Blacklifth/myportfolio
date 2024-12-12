@@ -1,5 +1,6 @@
 import Container from "@/components/Container";
 import SocialLinks from "@/components/SocialLinks";
+import Statistics from "@/components/Statistics";
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
 export default function Home() {
@@ -31,6 +32,7 @@ export default function Home() {
                         Download cv <Download />{" "}
                     </Button>
                     <SocialLinks />
+                    <Statistics />
                 </div>
                 {/*Photo*/}
                 <div>Photo</div>
