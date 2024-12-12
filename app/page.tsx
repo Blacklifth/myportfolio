@@ -1,4 +1,5 @@
 import Container from "@/components/Container";
+import Photo from "@/components/Photo";
 import SocialLinks from "@/components/SocialLinks";
 import Statistics from "@/components/Statistics";
 import { Button } from "@/components/ui/button";
@@ -35,7 +36,7 @@ export default function Home() {
                     <Statistics />
                 </div>
                 {/*Photo*/}
-                <div>Photo</div>
+                <Photo />
             </Container>
         </div>
     );
