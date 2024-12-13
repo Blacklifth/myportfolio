@@ -15,7 +15,7 @@ const Header = () => {
     return (
         <header
             className="border-b
-         border-b-hoverColor/50 bg-bodyColor text-white/80 "
+         border-b-hoverColor/50 bg-bodyColor text-white/80 sticky top-0 z-50"
         >
             <Container
                 className="py-5 flex items-center 
