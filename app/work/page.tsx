@@ -99,8 +99,7 @@ const WorkPage = () => {
                 <Carousel
                     opts={{ align: "start", loop: true }}
                     className="w-full"
-                    onSelect={() => {
-                        const index = 0;
+                    onSelect={(index) => {
                         if (typeof index === "number") {
                             handleSlideChange(index);
                         }
@@ -238,6 +237,7 @@ const WorkPage = () => {
                         <CarouselNext className="rounded-md bg-transparent border border-lightSky/20 hover:bg-hoverColor/20 hover:text-white  hover:border-hoverColor p-5 hoverEffect" />
                     </div>
                 </Carousel>
+                <div className="text-transparent">{currentIndex}</div>
             </PageLayout>
         </div>
     );
