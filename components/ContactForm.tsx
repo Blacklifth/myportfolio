@@ -91,10 +91,12 @@ const ContactForm = () => {
                 Let&apos;s work together
             </h3>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
-                ratione amet iste aliquam ex! Blanditiis, quaerat. Possimus unde
-                officiis eius vero. Voluptatibus minima atque itaque odio
-                repudiandae impedit quam adipisci?
+                As a Civil Engineer in Informatics, I specialize in delivering
+                innovative solutions through technical expertise and a
+                commitment to excellence. Whether you’re looking to optimize
+                processes, develop robust web platforms, or tackle complex
+                challenges, I’m ready to contribute to your success. Reach out
+                to discuss how we can collaborate effectively.
             </p>
             <>
                 {success ? (
