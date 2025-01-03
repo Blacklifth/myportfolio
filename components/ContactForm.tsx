@@ -165,7 +165,6 @@ const ContactForm = () => {
                         <Select
                             onValueChange={handleSelectChange}
                             disabled={loading}
-                            className="disabled:bg-white/10"
                         >
                             <SelectTrigger>
                                 <SelectValue placeholder="Select a service"></SelectValue>{" "}
