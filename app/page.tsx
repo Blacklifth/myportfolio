@@ -40,11 +40,12 @@ export default function Home() {
 
                 <Script
                     id="anythingllm-widget" // id único en la página
-                    strategy="afterInteractive" // se
-                    data-embed-id="7707ba4f-ea7f-44c5-9652-f943062f48f3"
-                    data-base-api-url="http://localhost:3001/api/embed"
-                    src="http://localhost:3000/embed/anythingllm-chat-widget.min.js"
-                ></Script>
+  data-embed-id="ce36cd4c-99bf-4483-a1b2-f7184a6d56b9"
+  data-base-api-url="http://localhost:3001/api/embed"
+  src="http://localhost:3000/embed/anythingllm-chat-widget.min.js">
+
+
+                </Script>
             </div>
         </div>
     );
