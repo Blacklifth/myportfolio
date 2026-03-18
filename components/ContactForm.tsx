@@ -18,7 +18,7 @@ import SuccessMsg from "./SuccessMsg";
 const ContactForm = () => {
     const { toast } = useToast();
     const [status, setStatus] = useState("");
-    const [success, setSucces] = useState(false);
+    const [success, setSuccess] = useState(false);
     const [loading, setLoading] = useState(false);
     const [formData, setFormData] = useState({
         Name: "",
@@ -45,7 +45,7 @@ const ContactForm = () => {
             if (!formData.Name.trim() || !formData.Email.trim()) {
                 toast({
                     title: "Error: Something is wrong",
-                    description: "Please input your mail and email to continue",
+                    description: "Please input your name and email to continue",
                     variant: "destructive",
                 });
                 return;
@@ -64,7 +64,7 @@ const ContactForm = () => {
                 body: form,
             });
             if (response?.ok) {
-                setSucces(true);
+                setSuccess(true);
                 setStatus("Success! Your message has been sent.");
                 setFormData({
                     Name: "",
