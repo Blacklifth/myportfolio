@@ -1,4 +1,4 @@
-import { Github, Instagram, Linkedin } from "lucide-react";
+import { Github, Linkedin } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 import {
@@ -19,11 +19,6 @@ const socialData = [
         icon: <Linkedin />,
         href: "https://www.linkedin.com/in/marcelo-loyola-464575186/",
     },
-    {
-        title: "Instagram",
-        icon: <Instagram />,
-        href: "https://www.instagram.com/blacklifth/",
-    },
 ];
 
 const SocialLinks = () => {
@@ -33,13 +28,13 @@ const SocialLinks = () => {
                 {socialData?.map((item) => (
                     <Tooltip key={item?.title}>
                         <TooltipTrigger asChild>
-                            <div className="text-lightSky/80 border border-lightSky/30 p-2.5 rounded-full hover:bg-lightSky/10 hover:border-lightSky hoverEffect">
+                            <div className="text-accentOrange/80 border border-accentOrange/30 p-2.5 rounded-full hover:bg-accentOrange/10 hover:border-accentOrange hoverEffect">
                                 <Link href={item?.href} target="_blank">
                                     <span>{item?.icon}</span>
                                 </Link>
                             </div>
                         </TooltipTrigger>
-                        <TooltipContent className="bg-hoverColor text-black font-semibold">
+                        <TooltipContent className="bg-hoverOrange text-black font-semibold">
                             {item?.title}
                         </TooltipContent>
                     </Tooltip>
