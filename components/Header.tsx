@@ -1,6 +1,5 @@
 "use client";
 import { navbarData } from "@/constants";
-import Container from "./Container";
 import Logo from "./Logo";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -13,54 +12,52 @@ const Header = () => {
     const pathname = usePathname();
 
     return (
-        <header
-            className="border-b
-         border-b-hoverColor/50 bg-bodyColor text-white/80 sticky top-0 z-50"
-        >
-            <Container
-                className="py-5 flex items-center 
-            justify-between "
+        <>
+            <header
+                className="w-full border-b border-b-white/10 glass rounded-none text-white/80 sticky top-0 z-50"
             >
-                <Logo title="Marcelo" subtitle="."></Logo>
-                <div className="hidden md:inline-flex items-center gap-7 text-sm uppercase tracking-wide font-medium">
-                    {navbarData?.map((item) => (
-                        <Link
-                            key={item?.title}
-                            href={item?.href}
-                            className={`hover:text-hoverColor hoverEffect relative group overflow-x-hidden ${
-                                pathname == item?.href && "text-hoverColor"
-                            } `}
-                        >
-                            {item?.title}
-                            <span
-                                className={`w-full h-px bg-hoverColor inline-block absolute left-0 bottom-0 group-hover:translate-x-0 hoverEffect  ${
-                                    pathname === item?.href
-                                        ? "translate-x-0"
-                                        : "-translate-x-[105%]"
+                <div className="max-w-4xl mx-auto px-4 py-5 flex items-center justify-between">
+                    <Logo title="Marcelo" subtitle="."></Logo>
+                    <div className="hidden md:inline-flex items-center gap-7 text-sm uppercase tracking-wide font-medium">
+                        {navbarData?.map((item) => (
+                            <Link
+                                key={item?.title}
+                                href={item?.href}
+                                className={`hover:text-hoverOrange hoverEffect relative group overflow-x-hidden ${
+                                    pathname == item?.href && "text-hoverOrange"
                                 } `}
-                            />
-                        </Link>
-                    ))}
+                            >
+                                {item?.title}
+                                <span
+                                    className={`w-full h-px bg-hoverOrange inline-block absolute left-0 bottom-0 group-hover:translate-x-0 hoverEffect  ${
+                                        pathname === item?.href
+                                            ? "translate-x-0"
+                                            : "-translate-x-[105%]"
+                                    } `}
+                                />
+                            </Link>
+                        ))}
 
-                    <Link
-                        href={"/Marcelo_Loyola_CVesp.pdf"}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-sm bg-lightSky/10 px-4 py-2 rounded-md border border-hoverColor/10 hover:border-hoverColor hover:bg-hoverColor hover:text-black hoverEffect"
+                        <Link
+                            href={"/Marcelo_Loyola_CVesp.pdf"}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-sm bg-accentOrange/10 px-4 py-2 rounded-md border border-hoverOrange/10 hover:border-hoverOrange hover:bg-hoverOrange hover:text-black hoverEffect"
+                        >
+                            Descargar CV
+                        </Link>
+                    </div>
+                    <button
+                        aria-label="Toggle menu"
+                        onClick={() => {
+                            setIsSidebaropen(!isSidebarOpen);
+                        }}
+                        className="inline-flex md:hidden relative hover:text-hoverOrange hoverEffect"
                     >
-                        Hire Me
-                    </Link>
+                        <Menu />
+                    </button>
                 </div>
-                <button
-                    aria-label="Toggle menu"
-                    onClick={() => {
-                        setIsSidebaropen(!isSidebarOpen);
-                    }}
-                    className="inline-flex md:hidden relative hover:text-hoverColor hoverEffect"
-                >
-                    <Menu />
-                </button>
-            </Container>
+            </header>
 
             <div className="md:hidden ">
                 <Sidebar
@@ -69,7 +66,7 @@ const Header = () => {
                     pathname={pathname}
                 />
             </div>
-        </header>
+        </>
     );
 };
 
