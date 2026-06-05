@@ -3,8 +3,6 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/Header";
 import PageTransition from "@/components/PageTransition";
-import StairTransition from "@/components/StairTransition";
-import { Toaster } from "@/components/ui/toaster";
 
 //FONT TYPE
 
@@ -28,9 +26,7 @@ export default function RootLayout({
         <html lang="en">
             <body className={`${raleway.variable} antialiased text-white/80`}>
                 <Header />
-                <StairTransition />
                 <PageTransition>{children}</PageTransition>
-                <Toaster />
             </body>
         </html>
     );

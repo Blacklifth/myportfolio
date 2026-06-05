@@ -77,16 +77,27 @@
         @apply border-border;
     }
     body {
-        @apply bg-bodyColor text-foreground;
+        @apply bg-baseDark text-foreground;
+        background-image: radial-gradient(circle at 15% 50%, rgba(255, 122, 0, 0.1), transparent 25%),
+                          radial-gradient(circle at 85% 30%, rgba(255, 255, 255, 0.05), transparent 25%);
     }
     .hoverEffect {
         @apply transition-all duration-300 cursor-pointer ease-in-out;
     }
     .text-outline {
-        -webkit-text-stroke: 1px #ffffff;
+        -webkit-text-stroke: 1px rgba(255, 255, 255, 0.8);
     }
     .text-outline:hover {
-        -webkit-text-stroke: 1px #00ff99;
+        -webkit-text-stroke: 1px #FF7A00;
+    }
+    .glass {
+        @apply bg-white/5 backdrop-blur-md border border-white/10 shadow-lg;
+    }
+    .glass-hover {
+        @apply transition-all duration-300;
+    }
+    .glass-hover:hover {
+        @apply bg-white/10 border-accentOrange/50;
     }
 }
 

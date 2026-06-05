@@ -7,7 +7,7 @@ import { motion } from "motion/react";
 const HomeDescription = () => {
     const [hasLoaded, setHasLoaded] = useState(false);
     const description =
-        " Civil Engineer in computer Science with experience in technical support,web development, and digital platform management. Known for proactivity, analytical skills, and a continuous improvement mindset. I aim to join as a trainee, Junior or join in a related role that allows me to apply my knowledge and grow professionally in a collaborative and challenging environment.";
+        "  Experiencia en desarrollo full-stack(Node.js, Next.js, React, Python, MySQL, Firebase). Perfil orientado al diseño de arquitecturas escalables, comprensión algorítmica y desarrollo asistido por IA(AI - augmented engineering).Experiencia en integración de LLMs, visualización de datos con D3.js, despliegue con Docker y trato directo con clientes en equiposágiles.";
 
     const { displayedText, isComplete } = useTypeWriter(description, 30);
 
@@ -16,7 +16,7 @@ const HomeDescription = () => {
     }, []);
     return (
         <motion.p
-            className="w-auto font-normal leading-7 mb-6 min-h-30"
+            className="w-full font-normal leading-7 mb-6 min-h-30 text-justify"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1, duration: 0.5 }}

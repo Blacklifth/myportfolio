@@ -14,12 +14,12 @@ const Logo = ({ className, title, subtitle }: Props) => {
             <Link href={"/"}>
                 <h2
                     className={cn(
-                        "font-semibold tracking-wide hover:text-hoverColor hoverEffect ",
+                        "font-semibold tracking-wide hover:text-hoverOrange hoverEffect ",
                         className
                     )}
                 >
                     {title}{" "}
-                    <span className="text-lightSky group-hover:text-white hoverEffect ">
+                    <span className="text-accentOrange group-hover:text-white hoverEffect ">
                         {" "}
                         {subtitle}
                     </span>
