@@ -1,3 +1,11 @@
+{
+	email marcelo@moccadev.cl
+}
+
 moccadev.cl {
-    reverse_proxy app:3000
+	reverse_proxy app:3000
+}
+
+www.moccadev.cl {
+	redir https://moccadev.cl{uri} permanent
 }
