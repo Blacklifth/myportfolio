@@ -38,14 +38,14 @@ const Header = () => {
                             </Link>
                         ))}
 
-                        <Link
+                        <a
                             href={"/Marcelo_Loyola_CVesp.pdf"}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-sm bg-accentOrange/10 px-4 py-2 rounded-md border border-hoverOrange/10 hover:border-hoverOrange hover:bg-hoverOrange hover:text-black hoverEffect"
                         >
                             Descargar CV
-                        </Link>
+                        </a>
                     </div>
                     <button
                         aria-label="Toggle menu"

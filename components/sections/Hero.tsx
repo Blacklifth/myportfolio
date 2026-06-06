@@ -49,13 +49,13 @@ const Hero = () => {
                             asChild
                             className="bg-transparent rounded-full border border-accentOrange/50 text-accentOrange hover:bg-hoverOrange hover:text-white hoverEffect h-12 px-8 text-base font-semibold w-full sm:w-auto"
                         >
-                            <Link
+                            <a
                                 href="/Marcelo_Loyola_CVesp.pdf"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
                                 Descargar CV <Download className="w-5 h-5 ml-2" />
-                            </Link>
+                            </a>
                         </Button>
                     </div>
 

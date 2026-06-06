@@ -53,14 +53,14 @@ const Sidebar: React.FC<Props> = ({ isOpen, onClose, pathname }) => {
                             {item?.title}
                         </Link>
                     ))}
-                    <Link
+                    <a
                         href={"/Marcelo_Loyola_CVesp.pdf"}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-sm bg-accentOrange/10 px-4 py-2 rounded-md border border-hoverOrange/10 hover:border-hoverOrange hover:bg-hoverOrange hover:text-white hoverEffect mt-4"
                     >
                         Descargar CV
-                    </Link>
+                    </a>
                     <SocialLinks />
                 </nav>
             </div>
