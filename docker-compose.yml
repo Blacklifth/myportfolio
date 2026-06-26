@@ -10,21 +10,12 @@ services:
       - NODE_ENV=production
     expose:
       - "3000"
+    # El proxy nginx de borde (proyecto `proxy`) lo alcanza por nombre `app` en la red edge.
+    # El TLS, los headers y el ruteo por dominio ahora viven en ese proxy (antes: Caddy local).
+    networks: [edge]
 
-  caddy:
-    image: caddy:2-alpine
-    restart: always
-    ports:
-      - "80:80"
-      - "443:443"
-      - "443:443/udp"
-    volumes:
-      - ./Caddyfile:/etc/caddy/Caddyfile
-      - caddy_data:/data
-      - caddy_config:/config
-    depends_on:
-      - app
-
-volumes:
-  caddy_data:
-  caddy_config:
+networks:
+  # Red compartida del proxy de borde. Se crea una vez en el VPS: docker network create edge
+  edge:
+    external: true
+    name: edge
