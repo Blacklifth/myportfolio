@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import BackToTop from "@/components/BackToTop";
 import PageTransition from "@/components/PageTransition";
 
 //FONT TYPE
@@ -27,6 +29,8 @@ export default function RootLayout({
             <body className={`${raleway.variable} antialiased text-white/80`}>
                 <Header />
                 <PageTransition>{children}</PageTransition>
+                <Footer />
+                <BackToTop />
             </body>
         </html>
     );

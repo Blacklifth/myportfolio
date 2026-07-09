@@ -66,14 +66,16 @@ const ProjectCard = ({ project, index = 0 }: Props) => {
                         <ArrowUpRight className="w-[18px] h-[18px]" />
                     </Link>
                 )}
-                <Link
-                    href={project.githubUrl}
-                    target="_blank"
-                    aria-label="Repositorio GitHub"
-                    className={linkClass}
-                >
-                    <Github className="w-[18px] h-[18px]" />
-                </Link>
+                {project.githubUrl && (
+                    <Link
+                        href={project.githubUrl}
+                        target="_blank"
+                        aria-label="Repositorio GitHub"
+                        className={linkClass}
+                    >
+                        <Github className="w-[18px] h-[18px]" />
+                    </Link>
+                )}
             </div>
         </RevealCard>
     );

@@ -173,11 +173,11 @@ export const projectsData = [
         title: "MoccadevAI Companion",
         category: "IA & Full Stack",
         description:
-            "Agente de IA personal con backend LLM local en FastAPI async. Frontend HTML/JS con un avatar 3D animado (VRM) que expresa emociones según las respuestas de la IA, más tool calling para búsqueda web y acceso a archivos locales.",
-        stack: ["Python", "FastAPI", "Three.js", "LLM", "Tool Calling"],
+            "Asistente de IA personal (avatar «Mocca») desplegado en producción. Arquitectura de agente full-client: el loop de inferencia y el tool calling corren en el navegador (React + TypeScript, BYOK vía OpenRouter), mientras el backend FastAPI async es agnóstico al LLM y actúa como auth (Firebase), ejecutor de skills y persistencia multi-usuario en PostgreSQL. Avatar 3D VRM animado por emociones, personalidades intercambiables y skills auto-descubiertas de búsqueda y lectura web.",
+        stack: ["React", "TypeScript", "FastAPI", "PostgreSQL", "Three.js / VRM", "Firebase Auth", "LLM"],
         image: "/images/projectNine.png",
-        liveUrl: "",
-        githubUrl: "https://github.com/MoccadevLabs/moccadev-agent",
+        liveUrl: "https://companion.moccadev.cl/",
+        githubUrl: "",
         featured: true,
     },
     {
