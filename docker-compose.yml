@@ -1,5 +1,6 @@
 services:
-  app:
+  portfolio-app:
+    container_name: portfolio-app
     build:
       context: .
       dockerfile: Dockerfile
@@ -10,9 +11,11 @@ services:
       - NODE_ENV=production
     expose:
       - "3000"
-    # El proxy nginx de borde (proyecto `proxy`) lo alcanza por nombre `app` en la red edge.
-    # El TLS, los headers y el ruteo por dominio ahora viven en ese proxy (antes: Caddy local).
-    networks: [edge]
+    # El proxy nginx de borde lo alcanza por nombre `portfolio-app` en la red edge.
+    networks:
+      edge:
+        aliases:
+          - portfolio-app
 
 networks:
   # Red compartida del proxy de borde. Se crea una vez en el VPS: docker network create edge
